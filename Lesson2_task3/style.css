@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+.form {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.abs {
+    position: absolute;
+    width: 160px;
+}
+
+.left {
+    left: 80px;
+}
+
+.right {
+    left: 260px;
+}
+
+.name-label,
+.name-input {
+    top: 80px;
+}
+
+.surname-label,
+.surname-input {
+    top: 120px;
+}
+
+.country-label,
+.country-input {
+    top: 160px;
+}
+
+.subscription-label,
+.subscription-input {
+    top: 200px;
+}
+
+.subscription-input {
+    width: auto;
+}
+
+.education-label,
+.education-input {
+    top: 240px;
+}
+
+.education-input input {
+    margin-bottom: 10px;
+}
+
+.about-label,
+.about-input {
+    top: 380px;
+}
+
+.button {
+    top: 520px;
+}
+
+
