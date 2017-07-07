@@ -18,7 +18,8 @@ h2 + span > p {
     margin-left: 90px;
 }
 
-h3 + span > p {
+h3 + span > p,
+h3 + span li {
     margin-left: 120px;
 }
 
