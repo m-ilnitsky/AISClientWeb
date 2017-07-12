@@ -34,15 +34,39 @@ h3 + span li {
 .banner {
     position: fixed;
     right: 30px;
-    bottom: 30px;
-    width: 200px;
-    background: #378DB2;
+    width: 190px;
+    height: 60px;
     margin: 0;
     padding: 0;
+    background: #999999;
 }
 
-.banner img {
-    max-width: 180px;
+.banner-above-shadow {
+    position: relative;
     margin: 0;
-    padding: 10px;
+    padding: 0;
+    top: -5px;
+    left: -5px;
+}
+
+.banner-academ-it-school {
+    bottom: 110px;
+}
+
+.banner-academ-it-school img {
+    max-height: 40px;
+    background: #378DB2;
+    margin: 0;
+    padding: 10px 11px;
+}
+
+.banner-html-academy {
+    bottom: 30px;
+}
+
+.banner-html-academy img {
+    max-height: 40px;
+    background: #2d2d44;
+    margin: 0;
+    padding: 10px 36px;
 }
