@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    position: relative;
+    width: 350px;
+    padding: 5px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.row.name {
+    margin-top: 40px;
+}
+
+.left {
+    position: absolute;
+    width: 160px;
+}
+
+.right {
+    position: relative;
+    top: 0;
+    left: 180px;
+    width: 160px;
+}
+
+.subscription input {
+    width: auto;
+}
+
+.education input {
+    margin-bottom: 10px;
+}
+
+.about textarea {
+    max-height: 200px;
+    max-width: 160px;
+}
+
+.error-input {
+    outline: 2px solid red;
+}
+
+div.error-input:after {
+    color: red;
+    content: "Введите корректные данные!";
+    position: absolute;
+    left: 380px;
+    bottom: 0;
+    width: 200px;
+}
+
+
