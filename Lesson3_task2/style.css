@@ -30,6 +30,12 @@ thead td {
     background-color: #f9d02a;
 }
 
-.img {
+td.img {
     background-color: #a9c7ee;
+}
+
+div.img {
+    background-image: url(img/mendeleev.png);
+    background-repeat: no-repeat;
+    padding: 85px;
 }
