@@ -43,7 +43,7 @@
     outline: 2px solid red;
 }
 
-div.error-input:after {
+div.error-input::after {
     color: red;
     content: "Введите корректные данные!";
     position: absolute;
