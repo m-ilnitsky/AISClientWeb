@@ -25,6 +25,23 @@ h3 + span li {
 
 h3 + span li {
     color: blue;
+    list-style-image: none;
+}
+
+h3:first-of-type + span li {
+    list-style-image: url(favicon24x24.png);
+}
+
+h3:nth-of-type(2) + span li {
+    list-style-type: disk;
+}
+
+h3:nth-of-type(3) + span li {
+    list-style-type: circle;
+}
+
+h3:nth-of-type(4) + span li {
+    list-style-type: square;
 }
 
 .alert {
