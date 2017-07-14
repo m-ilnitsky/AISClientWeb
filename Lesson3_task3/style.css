@@ -45,11 +45,30 @@
 
 div.error-input::after {
     color: red;
-    content: "Введите корректные данные!";
     position: absolute;
     left: 380px;
     bottom: 0;
-    width: 200px;
+    width: 300px;
+}
+
+.name.error-input::after {
+    content: "Введите своё имя!";
+}
+
+.surname.error-input::after {
+    content: "Введите свою фамилию!";
+}
+
+.country.error-input::after {
+    content: "Укажите свою страну!";
+}
+
+.education.error-input::after {
+    content: "Отметьте своё образование!";
+}
+
+.about.error-input::after {
+    content: "Напишите о себе хотя бы немного!";
 }
 
 
