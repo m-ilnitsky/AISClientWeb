@@ -40,8 +40,31 @@ div.img {
     padding: 85px;
 }
 
+div.vertical-text-cell {
+    transform: rotate(-90deg);
+}
+
+@keyframes to-center {
+    0% {
+        transform: scale(1.5);
+    }
+    1% {
+        transform: scale(1.5);
+    }
+    2% {
+        transform: scale(3);
+    }
+    100%{
+        transform: scale(3);
+    }
+}
+
 .s img:hover,
 .p img:hover {
     transform: scale(1.5);
     outline: 2px solid black;
+
+    animation-name: to-center;
+    animation-duration: 100s;
+    animation-delay: 0;
 }
