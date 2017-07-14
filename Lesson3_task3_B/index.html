@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html version="-//W3C//DTD XHTML 1.1//EN"
+      xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.w3.org/1999/xhtml
+                          http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd"
+>
+  <!--head profile="~/meta.php" -->
+  <head>
+    <title>Регистрационная форма</title>
+    <link rel="stylesheet" href="normalize.css" type="text/css" >
+    <link rel="stylesheet" href="style.css" type="text/css" >
+    <!-- media="min-width: 590px" media="all/print/projection/screen/speech" -->
+    <link rel="shortcut icon" href="favicon.png" type="image/png"> <!-- type="image/x-icon" type="image/gif" -->
+    <link rel="alternate" type="application/rss+xml" title="Название RSS-ленты" href="URL-ленты">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    <meta name="description" content="Регистрационная форма"> <!-- name="description/author" -->
+    <meta name="keywords" content="Регистрационная форма">
+    <meta name="Viewport" content="width=device-width">
+    <meta name="robots" content="index,follow"><!-- content="noindex,nofollow/all/none" -->
+  </head>
+  <body>
+    <div class="form">
+        <form action="" method="get">
+            <label class="abs left name-label" for="name">Имя</label>
+            <label class="abs left surname-label" for="surname">Фамилия</label>
+            <label class="abs left country-label" for="country">Страна</label>
+            <label class="abs left subscription-label" for="subscription">Подписка на новости</label>
+            <label class="abs left education-label">Образование</label>
+            <label class="abs left about-label" for="about">О себе</label>
+
+            <input type="text" class="abs right name-input warning" name="name" id="name" placeholder="Имя">
+            <input type="text" class="abs right surname-input" name="surname" id="surname" placeholder="Фамилия">
+            <select name="country" class="abs right country-input warning" id="country">
+                <option value="rf">Россия</option>
+                <option value="rb">Белоруссия</option>
+                <option value="ua">Украина</option>
+                <option value="kz">Казахстан</option>
+                <option value="none" selected="selected">Выберите страну</option>
+            </select>
+            <input type="checkbox" class="abs right subscription-input" name="subscription" id="subscription">
+            <div class="abs right education-input warning">
+                <label><input type="radio" name="education" value="non-checked" checked="checked"> Не выбрано</label>
+                <br/>
+                <label><input type="radio" name="education" value="primary"> Начальное</label>
+                <br/>
+                <label><input type="radio" name="education" value="school-9"> Школа (9 классов)</label>
+                <br/>
+                <label><input type="radio" name="education" value="school-11"> Школа (11 классов)</label>
+                <br/>
+                <label><input type="radio" name="education" value="secondary"> Среднее</label>
+                <br/>
+                <label><input type="radio" name="education" value="higher"> Высшее</label>
+            </div>
+            <textarea rows="3" class="abs right about-input warning" id="about"></textarea>
+
+            <input type="reset" class="abs button left">
+            <input type="submit" class="abs button right">
+        </form>
+    </div>
+  </body>
+</html>
