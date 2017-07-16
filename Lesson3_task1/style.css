@@ -52,46 +52,6 @@ h3:nth-of-type(4) + span li:nth-child(2n) {
     color: red;
 }
 
-.banner {
-    position: fixed;
-    right: 30px;
-    width: 190px;
-    height: 60px;
-    margin: 0;
-    padding: 0;
-    background: #999999;
-}
-
-.banner-above-shadow {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    top: -5px;
-    left: -5px;
-}
-
-.banner-academ-it-school {
-    bottom: 110px;
-}
-
-.banner-academ-it-school img {
-    max-height: 40px;
-    background: #378DB2;
-    margin: 0;
-    padding: 10px 11px;
-}
-
-.banner-html-academy {
-    bottom: 30px;
-}
-
-.banner-html-academy img {
-    max-height: 40px;
-    background: #2d2d44;
-    margin: 0;
-    padding: 10px 36px;
-}
-
 @keyframes decrease-opacity {
     0%{
         opacity: 1;
@@ -342,7 +302,150 @@ h3:nth-of-type(4) + span li:nth-child(2n) {
     }
 }
 
-.animate-banner {
+@keyframes time-killer-top {
+    0% {
+        transform: rotate(0);
+        bottom: 110px;
+        right: 30px;
+    }
+
+    1% {
+        transform: rotate(5deg);
+        bottom: 110px;
+        right: 40px;
+    }
+    2% {
+        transform: rotate(0);
+        bottom: 110px;
+        right: 70px;
+    }
+    3% {
+        transform: rotate(5deg);
+        bottom: 110px;
+        right: 80px;
+    }
+    4% {
+        transform: rotate(0);
+        bottom: 110px;
+        right: 110px;
+    }
+    5% {
+        transform: rotate(5deg);
+        bottom: 110px;
+        right: 120px;
+    }
+    6% {
+        transform: rotate(0);
+        bottom: 110px;
+        right: 150px;
+    }
+    7% {
+        transform: rotate(5deg);
+        bottom: 110px;
+        right: 160px;
+    }
+    8% {
+        transform: rotate(0);
+        bottom: 110px;
+        right: 190px;
+    }
+    9% {
+        transform: rotate(5deg);
+        bottom: 110px;
+        right: 200px;
+    }
+    10% {
+        transform: rotate(0);
+        bottom: 110px;
+        right: 230px;
+    }
+    
+    15% {
+        transform: rotate(0);
+        bottom: -90px;
+        right: 230px;
+    }
+
+    15.1% {
+        transform: rotate(0);
+        bottom: -90px;
+        right: -300px;
+    }
+    15.2% {
+        transform: rotate(0);
+        bottom: 200%;
+        right: -300px;
+    }
+    15.3% {
+        transform: rotate(0);
+        bottom: 200%;
+        right: 30px;
+    }
+    15.4% {
+        transform: rotate(0);
+        bottom: 100%;
+        right: 30px;
+    }
+
+    20% {
+        transform: rotate(0);
+        bottom: 110px;
+        right: 30px;
+    }
+    
+    100%{
+        transform: rotate(0);
+        bottom: 110px;
+        right: 30px;
+    }
+}
+
+.banner {
+    position: fixed;
+    right: 30px;
+    width: 190px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    background: #999999;
+}
+
+.banner-above-shadow {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    top: -5px;
+    left: -5px;
+}
+
+.banner-academ-it-school {
+    bottom: 110px;
+    
+    animation-name: time-killer-top;
+    animation-duration: 10s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+}
+
+.banner-academ-it-school img {
+    max-height: 40px;
+    background: #378DB2;
+    margin: 0;
+    padding: 10px 11px;
+}
+
+.banner-html-academy {
+    bottom: 30px;
+}
+
+.banner-html-academy img {
+    max-height: 40px;
+    background: #2d2d44;
+    margin: 0;
+    padding: 10px 36px;
+}
+
+.border-radius-banner {
     position: fixed;
     left: 30px;
     bottom: 30px;
@@ -353,7 +456,9 @@ h3:nth-of-type(4) + span li:nth-child(2n) {
     background: #999999;
     border: 4px solid #378DB2;
     border-radius: 16px;
+}
 
+.banner-web-dev {
     opacity: 1;
     animation-name: decrease-opacity;
     animation-duration: 10s;
@@ -367,21 +472,21 @@ h3:nth-of-type(4) + span li:nth-child(2n) {
     border-radius: 12px;
 }
 
-.animate-banner:hover {
+.banner-web-dev:hover {
     border-color: red;
     opacity: 1;
     animation-name: shake;
     animation-duration: 3s;
 }
 
-.animate-banner:hover ~ .banner-academ-it-school {
+.banner-web-dev:hover ~ .banner-academ-it-school {
     animation-name: jump-top;
     animation-duration: 3s;
     animation-delay: 0;
     animation-iteration-count: infinite;
 }
 
-.animate-banner:hover ~ .banner-html-academy {
+.banner-web-dev:hover ~ .banner-html-academy {
     animation-name: jump-bottom;
     animation-duration: 3s;
     animation-delay: 0;
