@@ -1,0 +1,456 @@
+p,
+div,
+img {
+    margin: 5px 30px 5px 30px;
+}
+
+h1 {
+    margin-left: 30px;
+}
+
+h2,
+h1 + span > p {
+    margin-left: 60px;
+}
+
+h3,
+h2 + span > p {
+    margin-left: 90px;
+}
+
+h3 + span > p,
+h3 + span li {
+    margin-left: 120px;
+}
+
+h3 + span li {
+    color: blue;
+    list-style-image: none;
+}
+
+h3:first-of-type + span li {
+    list-style-type: square;
+}
+
+h3:nth-of-type(2) + span li {
+    list-style-type: disk;
+}
+
+h3:nth-of-type(3) + span li {
+    list-style-type: circle;
+}
+
+h3:nth-of-type(4) + span li {
+    list-style-type: circle;
+    list-style-image: url(images/favicon24x24.png);
+}
+
+h3:nth-of-type(4) + span li:nth-child(2n) {
+    color: violet;
+}
+
+.alert {
+    color: red;
+}
+
+@keyframes big-jump-top {
+    0% {
+        bottom: 110px;
+    }
+    5% {
+        bottom: 130px;
+    }
+    10% {
+        bottom: 90px;
+    }
+    15% {
+        bottom: 150px;
+    }
+    20%{
+        bottom: 70px;
+    }
+    25%{
+        bottom: 170px;
+    }
+    30%{
+        bottom: 60px;
+    }
+    35%{
+        bottom: 50%;
+    }
+    40%{
+        bottom: 50px;
+    }
+    42.5%{
+        bottom: 90%;
+    }
+    45%{
+        bottom: 40px;
+    }
+    50%{
+        bottom: 110px;
+    }
+    100%{
+        bottom: 110px;
+    }
+}
+
+@keyframes big-jump-bottom {
+    0% {
+        transform: rotate(0);
+        bottom: 30px;
+    }
+    5% {
+        bottom: 30px;
+    }
+    10% {
+        bottom: 30px;
+    }
+    15% {
+        bottom: 0;
+    }
+    20%{
+        bottom: 10px;
+    }
+    25%{
+        bottom: -20px;
+    }
+    30%{
+        bottom: 0;
+    }
+    35%{
+        bottom: -20px;
+    }
+    40%{
+        bottom: -10px;
+    }
+    42.5%{
+        bottom: -30px;
+    }
+    45%{
+        bottom: -20px;
+    }
+    47.5%{
+        transform: rotate(0);
+        bottom: -90px;
+    }
+    50%{
+        transform: rotate(0);
+        bottom: -70px;
+    }
+    60%{
+        transform: rotate(-10deg);
+        bottom: -55px;
+    }
+    65%{
+        transform: rotate(10deg);
+        bottom: -40px;
+    }
+    70%{
+        transform: rotate(-10deg);
+        bottom: -25px;
+    }
+    75%{
+        transform: rotate(10deg);
+        bottom: -10px;
+    }
+    80%{
+        transform: rotate(-10deg);
+        bottom: 5px;
+    }
+    85%{
+        transform: rotate(10deg);
+        bottom: 20px;
+    }
+    90%{
+        transform: rotate(-5deg);
+        bottom: 25;
+    }
+    95%{
+        transform: rotate(5deg);
+        bottom: 30;
+    }
+    100%{
+        transform: rotate(0);
+        bottom: 30px;
+    }
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+    2%{
+        transform: rotate(5deg);
+    }
+    4%{
+        transform: rotate(-10deg);
+    }
+    6%{
+        transform: rotate(15deg);
+    }
+    8%{
+        transform: rotate(-20deg);
+    }
+    10%{
+        transform: rotate(40deg);
+    }
+    12%{
+        transform: rotate(-400deg);
+    }
+    14%{
+        transform: rotate(-345deg);
+    }
+    16%{
+        transform: rotate(-370deg);
+    }
+    18%{
+        transform: rotate(-355deg);
+    }
+    20%{
+        transform: rotate(-360deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes time-killer-top {
+    0% {
+        transform: rotate(0);
+        bottom: 110px;
+        right: 30px;
+    }
+
+    1% {
+        transform: rotate(5deg);
+        bottom: 110px;
+        right: 40px;
+    }
+    2% {
+        transform: rotate(0);
+        bottom: 110px;
+        right: 70px;
+    }
+    3% {
+        transform: rotate(5deg);
+        bottom: 110px;
+        right: 80px;
+    }
+    4% {
+        transform: rotate(0);
+        bottom: 110px;
+        right: 110px;
+    }
+    5% {
+        transform: rotate(5deg);
+        bottom: 110px;
+        right: 120px;
+    }
+    6% {
+        transform: rotate(0);
+        bottom: 110px;
+        right: 150px;
+    }
+    7% {
+        transform: rotate(5deg);
+        bottom: 110px;
+        right: 160px;
+    }
+    8% {
+        transform: rotate(0);
+        bottom: 110px;
+        right: 190px;
+    }
+    9% {
+        transform: rotate(5deg);
+        bottom: 110px;
+        right: 200px;
+    }
+    10% {
+        transform: rotate(0);
+        bottom: 110px;
+        right: 230px;
+    }
+    
+    15% {
+        transform: rotate(0);
+        bottom: -90px;
+        right: 230px;
+    }
+
+    15.1% {
+        transform: rotate(0);
+        bottom: -90px;
+        right: -300px;
+    }
+    15.2% {
+        transform: rotate(0);
+        bottom: 200%;
+        right: -300px;
+    }
+    15.3% {
+        transform: rotate(0);
+        bottom: 200%;
+        right: 30px;
+    }
+    15.4% {
+        transform: rotate(0);
+        bottom: 100%;
+        right: 30px;
+    }
+
+    20% {
+        transform: rotate(0);
+        bottom: 110px;
+        right: 30px;
+    }
+    
+    100%{
+        transform: rotate(0);
+        bottom: 110px;
+        right: 30px;
+    }
+}
+
+.banner {
+    position: fixed;
+    right: 30px;
+    width: 190px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    background: #999999;
+}
+
+.banner-above-shadow {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    top: -5px;
+    left: -5px;
+}
+
+.banner-academ-it-school {
+    bottom: 110px;
+    
+    animation-name: time-killer-top;
+    animation-duration: 10s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+}
+
+.banner-academ-it-school img {
+    max-height: 40px;
+    background: #378DB2;
+    margin: 0;
+    padding: 10px 11px;
+}
+
+.banner-html-academy {
+    bottom: 30px;
+}
+
+.banner-html-academy img {
+    max-height: 40px;
+    background: #2d2d44;
+    margin: 0;
+    padding: 10px 36px;
+}
+
+.border-radius-banner {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    width: 131px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    background: #999999;
+    border: 4px solid #378DB2;
+    border-radius: 16px;
+}
+
+.banner-web-dev {
+    opacity: 1;
+    animation-name: decrease-opacity;
+    animation-duration: 10s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+}
+
+.banner-web-dev img {
+    padding: 0;
+    margin: 0;
+    border-radius: 12px;
+}
+
+.banner-web-dev:hover {
+    border-color: red;
+    opacity: 1;
+    animation-name: shake;
+    animation-duration: 3s;
+}
+
+.banner-web-dev:hover ~ .banner-academ-it-school {
+    animation-name: jump-top;
+    animation-duration: 3s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+}
+
+.banner-web-dev:hover ~ .banner-html-academy {
+    animation-name: jump-bottom;
+    animation-duration: 3s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+}
+
+.banner-academ-it-school:hover {
+    animation-name: big-jump-top;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.banner-academ-it-school:hover ~ .banner-html-academy {
+    transform-origin: 50% 50%;
+    animation-name: big-jump-bottom;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.banner-html-academy {
+    transform-origin: 50% 50%;
+    animation-name: rotate;
+    animation-duration: 15s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake-bottom {
+    0% {
+        right: 30px;
+    }
+    25% {
+        right: 5px;
+    }
+    50% {
+        right: 30px;
+    }
+    75% {
+        right: 55px;
+    }
+    100% {
+        right: 30px;
+    }
+}
+
+.banner-html-academy.mouse-down {
+    transform-origin: 50% 50%;
+    animation-name: shake-bottom;
+    animation-duration: 0.2s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+}
