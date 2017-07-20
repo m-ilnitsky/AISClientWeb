@@ -1,0 +1,68 @@
+h1 {
+    text-align: center;
+}
+
+table {
+    background-color: white;
+    border: 2px solid #272c71;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+td {
+    border: 2px solid #272c71;
+    vertical-align: middle;
+    text-align: center;
+    color: #272c71;
+}
+
+thead td {
+    background-color: #272c71;
+    color: white;
+    font-size: 32px;
+}
+
+.s {
+    background-color: #d75d98;
+}
+
+.p {
+    background-color: #f9d02a;
+}
+
+td.img {
+    background-color: #a9c7ee;
+}
+
+div.img {
+    background-image: url(img/mendeleev.png);
+    background-repeat: no-repeat;
+    padding: 85px;
+}
+
+div.vertical-text-cell {
+    transform: rotate(-90deg);
+}
+
+@keyframes mouse-over {
+    0% {
+        transform: scale(1);
+        outline-width: 1px;
+        outline-style: solid;
+    }
+    40%{
+        transform: scale(2);
+        outline-width: 5px;
+        outline-style: solid;             
+    }
+    60%{
+        transform: scale(2);
+        outline-width: 5px;
+        outline-style: solid;            
+    }
+    100%{
+        transform: scale(1);
+        outline: none;
+        animation-name: none;
+    }
+}
