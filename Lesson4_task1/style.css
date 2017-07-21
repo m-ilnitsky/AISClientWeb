@@ -379,7 +379,7 @@ h3:nth-of-type(4) + span li:nth-child(2n) {
     animation-iteration-count: infinite;
 }
 
-.banner-academ-it-school.free:hover ~ .banner-html-academy {
+.banner-academ-it-school.free:hover ~ .banner-html-academy.free {
     transform-origin: 50% 50%;
     animation-name: attack-top-fall-bottom;
     animation-duration: 3s;
@@ -551,4 +551,80 @@ h3:nth-of-type(4) + span li:nth-child(2n) {
     animation-duration: 0.5s;
     animation-delay: 0;
     animation-iteration-count: infinite;
+}
+
+@keyframes move-top-to-top {
+    0% {
+        bottom: 110px;
+    }
+    100% {
+        bottom: 120%;
+    }
+}
+
+@keyframes move-top-to-top-2 {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 30px;
+    }
+}
+
+@keyframes move-bottom-to-left {
+    0% {
+        right: 30px;
+    }
+    100% {
+        right: 120%;
+    }
+}
+
+@keyframes move-bottom-to-left-2 {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 30px;
+    }
+}
+
+.banner-academ-it-school.move-to-1 {
+    animation-name: move-top-to-top;
+    animation-duration: 1.5s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+}
+
+.banner-academ-it-school.move-to-2 {
+    animation-name: move-top-to-top-2;
+    animation-duration: 0.2s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+}
+
+.banner-html-academy.move-to-1 {
+    animation-name: move-bottom-to-left;
+    animation-duration: 1.5s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+}
+
+.banner-html-academy.move-to-2 {
+    animation-name: move-bottom-to-left-2;
+    animation-duration: 0.2s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+}
+
+.banner-academ-it-school.position-2 {
+    top: 30px;
+    right: 30px;
+    animation-name: none;
+}
+
+.banner-html-academy.position-2 {
+    left: 30px;
+    bottom: 30px;
+    animation-name: none;
 }
