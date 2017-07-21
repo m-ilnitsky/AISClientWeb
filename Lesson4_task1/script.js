@@ -169,7 +169,7 @@
         for(var i = 0, l = banners.length; i < l; i++) {
             banners[i].addEventListener("mousedown", onMouseDown);
             banners[i].addEventListener("mouseup", onMouseUp);
-            banners[i].addEventListener("clic", onMouseUp);
+            banners[i].addEventListener("click", onMouseUp);
         }
 
     }
