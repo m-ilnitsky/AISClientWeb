@@ -116,39 +116,69 @@
 
                     var start = Date.now();
                     var state = 0;
+
+                        function fihishAnimation() {
+                            event.target.parentElement.parentElement.parentElement.classList.remove('free');
+                            event.target.parentElement.parentElement.parentElement.classList.remove('move-to-1');
+                            event.target.parentElement.parentElement.parentElement.classList.remove('move-to-2');
+                            event.target.parentElement.parentElement.parentElement.classList.add('position-2');
+                            clearInterval(timer);
+                            return;
+                        }
                     
                         function animation() {
                             var timePassed = Date.now() - start;
 
-                            if (state === 0 && timePassed < 1500){
-                                event.target.parentElement.parentElement.parentElement.classList.remove('free');
-                                event.target.parentElement.parentElement.parentElement.classList.add('move-to-1'); 
-                                state = 1;   
+                            if (timePassed < 1500){
+                                if(state === 1) {
+                                    return;
+                                } else if (state === 0) {
+                                    event.target.parentElement.parentElement.parentElement.classList.remove('free');
+                                    event.target.parentElement.parentElement.parentElement.classList.add('move-to-1'); 
+                                    state = 1;
+                                } else {
+                                    fihishAnimation();
+                                    return;
+                                }
                                 console.info("state1="+state);
                                 console.info(event.target+"  :");
                                 console.info(event.target.parentElement.parentElement.parentElement);                      
-                            } else if (state === 1 && timePassed > 1500 && timePassed < 1700){
-                                event.target.parentElement.parentElement.parentElement.classList.remove('move-to-1');
-                                event.target.parentElement.parentElement.parentElement.classList.remove('free');
-                                event.target.parentElement.parentElement.parentElement.classList.add('move-to-2');
-                                state = 2;
+                            } else if (timePassed > 1500 && timePassed < 1700){
+                                if(state === 2) {
+                                    return;
+                                } else if(state === 1) {
+                                    event.target.parentElement.parentElement.parentElement.classList.remove('move-to-1');
+                                    event.target.parentElement.parentElement.parentElement.classList.remove('free');
+                                    event.target.parentElement.parentElement.parentElement.classList.add('move-to-2');
+                                    state = 2;
+                                } else {
+                                    fihishAnimation();
+                                    return;
+                                }
                                 console.info("state2="+state);
                                 console.info(event.target+"  :");
                                 console.info(event.target.parentElement.parentElement.parentElement);
-                            } else if (state === 2 && timePassed > 1700 && timePassed < 1800){
-                                event.target.parentElement.parentElement.parentElement.classList.remove('move-to-2');
-                                event.target.parentElement.parentElement.parentElement.classList.remove('free');
-                                event.target.parentElement.parentElement.parentElement.classList.add('position-2');
+                            } else if (state === 2 && timePassed > 1700 && timePassed < 2000){
+                                if(state === 3) {
+                                    return;
+                                } else if (state === 2) {
+                                    event.target.parentElement.parentElement.parentElement.classList.remove('move-to-2');
+                                    event.target.parentElement.parentElement.parentElement.classList.remove('free');
+                                    event.target.parentElement.parentElement.parentElement.classList.add('position-2');
+                                    state = 3;
+                                } else {
+                                    fihishAnimation();
+                                    return;
+                                }
                                 console.info("state3="+state);
                                 console.info(event.target+"  :");
                                 console.info(event.target.parentElement.parentElement.parentElement);
-                            } else if (timePassed > 1800) {
-                                event.target.parentElement.parentElement.parentElement.classList.remove('free');
-                                state = 0;
+                            } else if (timePassed > 2000) {
+                                state = 4;
+                                fihishAnimation();
                                 console.info("state4="+state);
                                 console.info(event.target+"  :");
                                 console.info(event.target.parentElement.parentElement.parentElement);
-                                clearInterval(timer);
                                 return;
                             }
                         }
@@ -169,7 +199,6 @@
         for(var i = 0, l = banners.length; i < l; i++) {
             banners[i].addEventListener("mousedown", onMouseDown);
             banners[i].addEventListener("mouseup", onMouseUp);
-            banners[i].addEventListener("click", onMouseUp);
         }
 
     }
