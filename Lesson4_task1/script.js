@@ -28,17 +28,49 @@
             }
         })();
 
+        function bottomOnMouseOver(event){
+            var banners = document.querySelectorAll(".banner");
+            for(var i = 0, l = banners.length; i < l; i++) {
+                banners[i].classList.add("bottom-attack");
+            }
+        }
+
+        function bottomOnMouseOut(event){
+            var banners = document.querySelectorAll(".banner");
+            for(var i = 0, l = banners.length; i < l; i++) {
+                banners[i].classList.remove('bottom-attack');
+                banners[i].classList.remove('shake-color');
+                banners[i].classList.add("free");
+            }
+        }
+
+        var bannerHtmlAcademy = document.querySelector(".banner.banner-html-academy");
+
+        bannerHtmlAcademy.addEventListener("mouseover", bottomOnMouseOver);
+        bannerHtmlAcademy.addEventListener("mousedown", bottomOnMouseOver);
+        bannerHtmlAcademy.addEventListener("mouseup", bottomOnMouseOut);
+        bannerHtmlAcademy.addEventListener("mouseout", bottomOnMouseOut);
+
         function onMouseDown(event){
             if(event.target.matches("img")){
-                event.target.parentElement.parentElement.parentElement.classList.add('mouse-down');
-                console.info(event.target.parentElement.parentElement.parentElement);
+                event.target.parentElement.parentElement.parentElement.classList.add('shake');
+                
+                var banners = document.querySelectorAll(".banner");
+                for(var i = 0, l = banners.length; i < l; i++) {
+                    banners[i].classList.remove('free');
+                }
             }
         }
 
         function onMouseUp(event){
             if(event.target.matches("img")){
-                event.target.parentElement.parentElement.parentElement.classList.remove('mouse-down');
-                console.info(event.target.parentElement.parentElement.parentElement);
+                event.target.parentElement.parentElement.parentElement.classList.remove('shake');
+                event.target.parentElement.parentElement.parentElement.classList.remove('bottom-attack');
+
+                var banners = document.querySelectorAll(".banner");
+                for(var i = 0, l = banners.length; i < l; i++) {
+                    banners[i].classList.add('free');
+                }
             }
         }
 
@@ -47,9 +79,7 @@
         for(var i = 0, l = banners.length; i < l; i++){
             banners[i].addEventListener("mousedown", onMouseDown);
             banners[i].addEventListener("mouseup", onMouseUp);
-            banners[i].addEventListener("mouseout", onMouseUp);
             banners[i].addEventListener("clic", onMouseUp);
-            console.info(banners[i]);
         }
 
     }
