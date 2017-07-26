@@ -143,6 +143,11 @@
             var userJSON = createJSON();
 
             console.info('user='+userJSON);
+
+            //var xmlhttp = new XMLHttpRequest();
+            //xmlhttp.open('POST', 'https:yandex.ru', true);
+            //xmlhttp.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+            //xmlhttp.send(userJSON);
         }
 
         var buttonReset = document.getElementById("button-reset");
