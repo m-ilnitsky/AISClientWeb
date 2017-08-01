@@ -32,16 +32,7 @@
                     firstClick = event.target;
                     $(firstClick).addClass('red');
                 } else {
-                    var secondClick = event.target;
-
-                    var innerHTML = $(firstClick).html();
-                    $(firstClick).html($(secondClick).html());
-                    $(secondClick).html(innerHTML);
-
-                    $(firstClick).removeClass('red');
-                    firstClick = null;
-
-                    console.info('firstClick=' + firstClick);
+                    swopCells(event.target);
                 }
             }
         }
@@ -52,18 +43,34 @@
                     firstClick = event.target.parentElement;
                     $(firstClick).addClass('red');
                 } else {
-                    var secondClick = event.target.parentElement;
-
-                    var innerHTML = $(firstClick).html();
-                    $(firstClick).html($(secondClick).html());
-                    $(secondClick).html(innerHTML);
-
-                    $(firstClick).removeClass('red');
-                    firstClick = null;
-
-                    console.info('firstClick=' + firstClick);
+                    swopCells(event.target.parentElement);
                 }
             }
+        }
+
+        function swopCells(secondClick){
+            console.info('firstClick=' + firstClick);
+            console.info('secondClick=' + secondClick);
+
+            var firstClass = $(firstClick).attr('class');
+            var secondClass = $(secondClick).attr('class');
+            
+            console.info('firstClass='+firstClass);
+            console.info('secondClass='+secondClass);
+
+            var innerHTML = $(firstClick).html();
+            $(firstClick).html($(secondClick).html());
+            $(secondClick).html(innerHTML);
+
+            $(firstClick).removeClass(firstClass);
+            $(secondClick).removeClass(secondClass);
+            $(firstClick).addClass(secondClass).removeClass('red');
+            $(secondClick).addClass(firstClass).removeClass('red');
+
+            $(firstClick).children().on('click', onImgClick);
+            $(secondClick).children().on('click', onImgClick);
+
+            firstClick = null;
         }
 
         $('table.mendeleev td.p').add('table.mendeleev td.s').on('click', onTdClick);
