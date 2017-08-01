@@ -31,39 +31,16 @@
         (function(){
             var words = ['Молотов', 'молотов', 'смесь', 'состав', 'год', 'хлебница', 'бомба', 'термин', 'название', 'применение', 'огонь', 'бутылка'];
 
-            /*
-            var el = document.querySelectorAll('h1, h2, p, span, li');
+            var innerHtml = $('body').html();
 
-            for(var i = 0; i < el.length; i++) {
-                console.info('[' + i + ']=' + el[i].innerText);
+            for(var i = 0; i < words.length; i++){
+                innerHtml = innerHtml.replace(new RegExp(words[i], 'ig'), 
+                '<b style="color:#' + ((i + 5) * 32) + 
+                '; text-transform:uppercase">' + words[i] + '</b>');
+            }
 
-                for(var j = 0; j < words.length; j++){
-                    if(el[i].innerText.indexOf(words[j]) >= 0){
-                        console.info('+');
-                        el[i].innerText.replace('/' + words[j] + '/ig', '<b>' + words[j] + '</b>');
-                        el[i].innerText.replace(words[j], '<b>' + words[j] + '</b>');
-                    }
-                }
-            }*/
-
-            /*
-            var el = $('h1, h2, p, span, li');
-
-            for(var i = 0; i < el.length; i++) {
-                console.info('[' + i + ']=' + el[i].innerText);
-                console.info('[' + i + ']new=' + el.eq(i).text().replace('/' + words[0] + '/ig', '<b>' + words[0] + '</b>'));
-                el.eq(i).text(el.eq(i).text().replace('/' + words[0] + '/ig', '<b>' + words[0] + '</b>'));
-            }*/
-
-            $('body').html(String($('body').html()).replace('/' + words[0] + '/ig', '<b>' + words[0] + '</b>'));
-            //$('body').html($('body').html().replace(words[0], '<b>' + words[0] + '</b>'));
-
-            //document.body.innerHTML = document.body.innerHTML.replace('/Молотов/ig', '<b>Молотов</b>');
-            //document.body.innerHTML = document.body.innerHTML.replace('Молотов', '<b>Молотов</b>');
-
+            $('body').html(innerHtml);
         })();
-
-
 
         function bottomOnMouseOver(event){
             if(event.target.matches("img")) {
