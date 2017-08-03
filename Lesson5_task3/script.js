@@ -135,6 +135,56 @@
             return userJSON;
         }
 
+        function showLoading(){
+
+            var panel = $('<div></div>')
+                .attr('id', 'loading-panel')
+                .addClass('loading-panel')
+                .css({position: 'fixed', width: '100%', 
+                        height: '100%', left: '0', top: '0', opacity: '0.8', 
+                        'background-color': '#777777'})
+                .appendTo(document.body);
+            
+            var progress = $('<div></div>')
+                .attr('id', 'loading-progress')
+                .css({width: '256px', height: '256px', 'margin-bottom': '32px', 
+                    position: 'fixed', top: '100px', left: '100px'})
+                .appendTo($('.loading-panel'));
+
+            var $topLoader = $('#loading-progress')
+                .percentageLoader({width: 256, height: 256, controllable : true, progress : 0.5, 
+                    onProgressUpdate : function(val) {
+                        $topLoader.setValue(Math.round(val * 100.0));
+                    }
+                });
+
+            var topLoaderRunning = false;
+         
+            if (topLoaderRunning) {
+                return;
+            }
+            topLoaderRunning = true;
+            $topLoader.setProgress(0);
+            $topLoader.setValue('');
+            var kb = 0;
+            var totalKb = 100;
+            
+            var animateFunc = function() {
+                kb += 1;
+                $topLoader.setProgress(kb / totalKb);
+                //$topLoader.setValue(kb.toString() + 'kb');
+              
+                if (kb < totalKb) {
+                    setTimeout(animateFunc, 30);
+                } else {
+                    topLoaderRunning = false;
+                    $('#loading-panel').remove();
+                }
+            }
+            
+            setTimeout(animateFunc, 30);
+        }
+
         function submit(){
             if(isInputError()){
                 return;
@@ -143,6 +193,8 @@
             var userJSON = createJSON();
 
             console.info('user='+userJSON);
+
+            showLoading();
 
             //var xmlhttp = new XMLHttpRequest();
             //xmlhttp.open('POST', 'https:yandex.ru', true);
