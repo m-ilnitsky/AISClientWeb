@@ -7,5 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "M.A.Ilnitsky",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jqueryui": "^1.11.1",
+    "update": "^0.7.4"
+  }
 }
