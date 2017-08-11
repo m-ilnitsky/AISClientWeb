@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p,
+div,
+img {
+    margin: 10px 20px 10px 20px;
+}
+
+h1 {
+    margin-left: 30px;
+}
+
+h3+div li {
+    font-weight: bold;
+    list-style-type: circle;
+    list-style-image: url(../img/favicon24x24.png);
+    margin-left: 20px;
+}
+
+.alert {
+    color: red;
+}
