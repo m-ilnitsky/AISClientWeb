@@ -1,0 +1,15 @@
+{
+    "name": "lesson6_task1",
+    "version": "1.0.0",
+    "description": "first npm project",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "M.A.Ilnitsky",
+    "license": "ISC",
+    "dependencies": {
+        "jquery": "^3.2.1",
+        "jqueryui": "^1.11.1",
+        "requirejs": "~2.3.4"
+    }
+}
