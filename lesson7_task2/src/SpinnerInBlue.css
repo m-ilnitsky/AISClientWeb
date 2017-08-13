@@ -1,0 +1,61 @@
+.SpinnerInBlue {
+    position: relative;
+    background-color: #007;
+    border-radius: 25px;
+    border: none;
+    height: 50px;
+    width: 200px;
+    padding: 0;
+    margin: 0;
+}
+
+.SpinnerInBlue-Decrement,
+.SpinnerInBlue-Increment,
+.SpinnerInBlue-Value {
+    position: absolute;
+    top: 5px;
+}
+
+.SpinnerInBlue-Decrement {
+    left: 5px;
+}
+
+.SpinnerInBlue-Value {
+    left: 50px;
+}
+
+.SpinnerInBlue-Increment {
+    left: 155px;
+}
+
+.SpinnerInBlue-Decrement,
+.SpinnerInBlue-Increment {
+    background-color: #0af;
+    color: #007;
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.SpinnerInBlue-Value {
+    background-color: #0af;
+    color: #007;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}

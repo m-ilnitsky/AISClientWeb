@@ -1,0 +1,61 @@
+.SpinnerInGrey {
+    position: relative;
+    background-color: #ccc;
+    border: 2px solid #777;
+    border-radius: 7px;
+    height: 50px;
+    width: 160px;
+    padding: 0;
+    margin: 0;
+}
+
+.SpinnerInGrey-Decrement,
+.SpinnerInGrey-Increment,
+.SpinnerInGrey-Value {
+    position: absolute;
+    top: 0;
+}
+
+.SpinnerInGrey-Decrement {
+    left: 0;
+}
+
+.SpinnerInGrey-Value {
+    left: 30px;
+}
+
+.SpinnerInGrey-Increment {
+    left: 130px;
+}
+
+.SpinnerInGrey-Decrement,
+.SpinnerInGrey-Increment {
+    background-color: #ccc;
+    color: #555;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    width: 30px;
+    height: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.SpinnerInGrey-Value {
+    background-color: #555;
+    color: #ccc;
+    border: 2px solid #555;
+    outline: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 90px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0;
+    margin: 3px;
+    text-align: center;
+}

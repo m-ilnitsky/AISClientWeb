@@ -1,0 +1,64 @@
+.SpinnerInGreen {
+    position: relative;
+    border: none;
+    height: 40px;
+    width: 152px;
+    padding: 0;
+    margin: 0;
+}
+
+.SpinnerInGreen-Decrement,
+.SpinnerInGreen-Increment,
+.SpinnerInGreen-Value {
+    position: absolute;
+}
+
+.SpinnerInGreen-Value {
+    top: 0;
+    left: 0;
+}
+
+.SpinnerInGreen-Increment {
+    top: 0;
+    left: 122px;
+    border-top-right-radius: 9px;
+    margin: 0;
+}
+
+.SpinnerInGreen-Decrement {
+    top: 23px;
+    left: 122px;
+    border-bottom-right-radius: 9px;
+}
+
+.SpinnerInGreen-Decrement,
+.SpinnerInGreen-Increment {
+    background-color: white;
+    color: #096;
+    border: 2px solid #096;
+    outline: none;
+    width: 30px;
+    height: 21px;
+    font-size: 12px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.SpinnerInGreen-Value {
+    background-color: white;
+    color: #096;
+    border: 2px solid #096;
+    outline: none;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+    height: 40px;
+    width: 116px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
