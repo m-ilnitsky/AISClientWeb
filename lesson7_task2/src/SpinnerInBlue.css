@@ -30,7 +30,7 @@
 
 .SpinnerInBlue-Decrement,
 .SpinnerInBlue-Increment {
-    background-color: #0af;
+    background-color: #aaf;
     color: #007;
     border: none;
     outline: none;
@@ -46,7 +46,7 @@
 }
 
 .SpinnerInBlue-Value {
-    background-color: #0af;
+    background-color:#aaf;
     color: #007;
     border: none;
     outline: none;

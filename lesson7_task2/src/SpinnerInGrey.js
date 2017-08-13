@@ -31,7 +31,10 @@ class SpinnerInGray extends Spinner {
     return (
       <div className="SpinnerInGrey">
         <input className="SpinnerInGrey-Decrement" type="button" value="<" onClick={(e)=>{this.decrement(e)}}/>
-        <input className="SpinnerInGrey-Value" type="text" value={this.showValue()} onChange={(e)=>{this.change(e)}}/>
+        <input className="SpinnerInGrey-Value" type="text" value={this.showValue()} 
+          onChange={(e)=>{this.change(e)}}
+          onKeyDown={(e)=>{this.pressKey(e)}}
+        />
         <input className="SpinnerInGrey-Increment"type="button" value=">" onClick={(e)=>{this.increment(e)}}/>
       </div>
     );

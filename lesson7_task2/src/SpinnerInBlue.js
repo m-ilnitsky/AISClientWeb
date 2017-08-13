@@ -31,7 +31,10 @@ class SpinnerInBlue extends Spinner {
     return (
       <div className="SpinnerInBlue">
         <input className="SpinnerInBlue-Decrement" type="button" value="-" onClick={(e)=>{this.decrement(e)}}/>
-        <input className="SpinnerInBlue-Value" type="text" value={this.showValue()} onChange={(e)=>{this.change(e)}}/>
+        <input className="SpinnerInBlue-Value" type="text" value={this.showValue()} 
+          onChange={(e)=>{this.change(e)}}
+          onKeyDown={(e)=>{this.pressKey(e)}}
+        />
         <input className="SpinnerInBlue-Increment"type="button" value="+" onClick={(e)=>{this.increment(e)}}/>
       </div>
     );

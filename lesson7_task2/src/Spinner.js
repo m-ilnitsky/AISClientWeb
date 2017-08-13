@@ -55,23 +55,31 @@ class Spinner extends Component {
   }
 
   check(value){
-    var newValue = +value;
-
-    if(newValue > this.state.max){
-      newValue = this.state.max;
-    }else if(newValue < this.state.min){
-      newValue = this.state.min;
+    if(typeof(value) === 'string'){
+      var newValue = parseFloat(value.replace(',', '.'), 10);
+    }else if(typeof(value) === 'number'){
+      var newValue = value;
     }
     
-    newValue = this.cutOff(newValue);
-    
-    var remainder = newValue % this.state.multiple;
-    if((this.state.multiple - Math.abs(remainder)) > Math.pow(10, -this.state.digits)){
-      newValue = newValue - remainder;
-    }
-    console.info(newValue + ' % ' + this.state.multiple +' = ' + remainder);
+    if(isNaN(newValue)){
+      newValue = this.state.value;
+    }else{
+      if(newValue > this.state.max){
+        newValue = this.state.max;
+      }else if(newValue < this.state.min){
+        newValue = this.state.min;
+      }
+      
+      newValue = this.cutOff(newValue);
+      
+      var remainder = newValue % this.state.multiple;
+      if((this.state.multiple - Math.abs(remainder)) > Math.pow(10, -this.state.digits)){
+        newValue = newValue - remainder;
+      }
+      console.info(newValue + ' % ' + this.state.multiple +' = ' + remainder);
 
-    this.setState({value: newValue});
+      this.setState({value: newValue});
+    }
   }
 
   showValue(){
@@ -106,26 +114,33 @@ class Spinner extends Component {
   }
 
   increment(){
-    console.info('step = ' + this.state.step);
-    var newValue = +this.state.value + this.state.step;
-    this.check(newValue);
+    this.check(+this.state.value + this.state.step);
   }
 
   decrement(){
-    console.info('step = ' + this.state.step);
-    var newValue = +this.state.value - this.state.step;
-    this.check(newValue);
+    this.check(+this.state.value - this.state.step);
   }
 
   change(e){
     this.check(e.target.value);
+  }
+
+  pressKey(e){
+    if(e.keyCode === 38){
+      this.check(+this.state.value + this.state.step);
+    }else if(e.keyCode === 40){
+      this.check(+this.state.value - this.state.step);
+    }
   }
   
   render() {
     return (
       <div className="Spinner">
         <input className="Spinner-Decrement" type="button" value="-" onClick={(e)=>{this.decrement(e)}}/>
-        <input className="Spinner-Value" type="text" value={this.showValue()} onChange={(e)=>{this.change(e)}}/>
+        <input className="Spinner-Value" type="text" value={this.showValue()} 
+          onChange={(e)=>{this.change(e)}}
+          onKeyDown={(e)=>{this.pressKey(e)}}
+        />
         <input className="Spinner-Increment"type="button" value="+" onClick={(e)=>{this.increment(e)}}/>
       </div>
     );
