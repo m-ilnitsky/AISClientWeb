@@ -19,13 +19,13 @@ class App extends Component {
         </div>
         <div className="App-intro" id="intro">
           <h3>Вариант спиннера без оформления, с шагом квантования 1, и шагом изменения по кнопке 1:</h3>
-          <span className="Spinner"><Spinner di="spinner1" /></span>
+          <span className="Spinner"><Spinner id="spinner1" /></span>
           <h3>Вариант спиннера в сером цвете, с шагом квантования 2, и шагом изменения по кнопке 4:</h3>
-          <span className="Spinner"><SpinnerInGrey di="spinner2" /></span>
+          <span className="Spinner"><SpinnerInGrey id="spinner2" /></span>
           <h3>Вариант спиннера в синем цвете с круглыми кнопками, с шагом квантования 0.025, и шагом изменения по кнопке 0.15:</h3>
-          <span className="Spinner"><SpinnerInBlue di="spinner3" /></span>
+          <span className="Spinner"><SpinnerInBlue id="spinner3" /></span>
           <h3>Вариант спиннера в зелёном цвете с кнопками справа, с шагом квантования 0.1, и шагом изменения по кнопке 0.5:</h3>
-          <span className="Spinner"><SpinnerInGreen di="spinner4" /></span>
+          <span className="Spinner"><SpinnerInGreen id="spinner4" /></span>
         </div>
       </div>
     );
