@@ -1,0 +1,82 @@
+.LoginForm {
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+    width: 230px;
+    height: 130px;
+
+    border: none;
+    border-radius: 5px;
+    background-color: #007;
+    color: white;
+}
+
+.LoginForm__NicknameLabel,
+.LoginForm__PasswordLabel {
+    position: absolute;
+    left: 10px;
+
+    margin: 0;
+    padding: 0;
+
+    vertical-align: middle;
+    font-size: 20px;
+}
+.LoginForm__NicknameLabel {
+    top: 10px;
+}
+.LoginForm__PasswordLabel {
+    top: 50px;
+}
+
+.LoginForm__Nickname,
+.LoginForm__Password {
+    position: absolute;
+    left: 90px;
+
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    width: 125px;
+    height: 30px;
+
+    outline: none;
+    border: none;
+    border-radius: 3px;
+
+    color: #007;
+    font-size: 20px;
+    font-weight: bold;
+}
+.LoginForm__Nickname {
+    top: 10px;
+}
+.LoginForm__Password {
+    top: 50px;
+}
+.LoginForm__Nickname:focus,
+.LoginForm__Password:focus {
+    background-color: #aaf;
+}
+
+.LoginForm__Submit {
+    position: absolute;
+    left: 10px;
+    top: 90px;
+
+    margin: 0;
+    padding: 0;
+    width: 210px;
+    height: 30px;
+
+    border: 1px solid white;
+    border-radius: 3px;
+    background-color: #007;
+
+    color: white;
+    font-size: 20px;
+}
+.LoginForm__Submit:hover {
+    background-color: #00a;
+}
