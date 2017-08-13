@@ -55,10 +55,12 @@ class Spinner extends Component {
   }
 
   check(value){
+    var newValue;
+
     if(typeof(value) === 'string'){
-      var newValue = parseFloat(value.replace(',', '.'), 10);
+      newValue = parseFloat(value.replace(',', '.'), 10);
     }else if(typeof(value) === 'number'){
-      var newValue = value;
+      newValue = value;
     }
     
     if(isNaN(newValue)){
