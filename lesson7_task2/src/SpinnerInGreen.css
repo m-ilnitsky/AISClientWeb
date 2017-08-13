@@ -8,30 +8,6 @@
 }
 
 .SpinnerInGreen-Decrement,
-.SpinnerInGreen-Increment,
-.SpinnerInGreen-Value {
-    position: absolute;
-}
-
-.SpinnerInGreen-Value {
-    top: 0;
-    left: 0;
-}
-
-.SpinnerInGreen-Increment {
-    top: 0;
-    left: 122px;
-    border-top-right-radius: 9px;
-    margin: 0;
-}
-
-.SpinnerInGreen-Decrement {
-    top: 23px;
-    left: 122px;
-    border-bottom-right-radius: 9px;
-}
-
-.SpinnerInGreen-Decrement,
 .SpinnerInGreen-Increment {
     background-color: white;
     color: #096;
@@ -61,4 +37,28 @@
     padding: 0;
     margin: 0;
     text-align: center;
+}
+
+.SpinnerInGreen-Decrement,
+.SpinnerInGreen-Increment,
+.SpinnerInGreen-Value {
+    position: absolute;
+}
+
+.SpinnerInGreen-Value {
+    top: 0;
+    left: 0;
+}
+
+.SpinnerInGreen-Increment {
+    top: 0;
+    left: 122px;
+    border-top-right-radius: 9px;
+    margin: 0;
+}
+
+.SpinnerInGreen-Decrement {
+    top: 23px;
+    left: 122px;
+    border-bottom-right-radius: 9px;
 }

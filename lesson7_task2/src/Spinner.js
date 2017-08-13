@@ -66,7 +66,7 @@ class Spinner extends Component {
     newValue = this.cutOff(newValue);
     
     var remainder = newValue % this.state.multiple;
-    if(Math.abs(Math.abs(remainder) - this.state.multiple) > Math.pow(10, -this.state.digits)){
+    if((this.state.multiple - Math.abs(remainder)) > Math.pow(10, -this.state.digits)){
       newValue = newValue - remainder;
     }
     console.info(newValue + ' % ' + this.state.multiple +' = ' + remainder);
