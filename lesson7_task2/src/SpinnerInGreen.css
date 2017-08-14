@@ -5,10 +5,12 @@
     width: 152px;
     padding: 0;
     margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.SpinnerInGreen-Decrement,
-.SpinnerInGreen-Increment {
+.SpinnerInGreen__Decrement,
+.SpinnerInGreen__Increment {
     background-color: white;
     color: #096;
     border: 2px solid #096;
@@ -22,8 +24,13 @@
     padding: 0;
     margin: 0;
 }
+.SpinnerInGreen__Decrement:hover,
+.SpinnerInGreen__Increment:hover {
+    color: #0f4;
+    border-color: #0f4;
+}
 
-.SpinnerInGreen-Value {
+.SpinnerInGreen__Value {
     background-color: white;
     color: #096;
     border: 2px solid #096;
@@ -38,26 +45,32 @@
     margin: 0;
     text-align: center;
 }
+.SpinnerInGreen__Value:hover {
+    border-color: #0f4;
+}
+.SpinnerInGreen__Value:focus {
+    color: #0f4;
+}
 
-.SpinnerInGreen-Decrement,
-.SpinnerInGreen-Increment,
-.SpinnerInGreen-Value {
+.SpinnerInGreen__Decrement,
+.SpinnerInGreen__Increment,
+.SpinnerInGreen__Value {
     position: absolute;
 }
 
-.SpinnerInGreen-Value {
+.SpinnerInGreen__Value {
     top: 0;
     left: 0;
 }
 
-.SpinnerInGreen-Increment {
+.SpinnerInGreen__Increment {
     top: 0;
     left: 122px;
     border-top-right-radius: 9px;
     margin: 0;
 }
 
-.SpinnerInGreen-Decrement {
+.SpinnerInGreen__Decrement {
     top: 23px;
     left: 122px;
     border-bottom-right-radius: 9px;

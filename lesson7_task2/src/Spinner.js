@@ -3,26 +3,15 @@ import React, { Component } from 'react';
 class Spinner extends Component {
 
   constructor(props){
-    super();
-  //  if(props === undefined){
-      this.state = {
-        value: 0,       // Искомое число
-        min: -1e6,      // Минимальное значение числа
-        max: 1e6,       // Максимальное значение числа
-        step: 1,        // Шаг изменения числа кнопками
-        multiple: 1,    // Число должно без остатка делиться на данную величину
-        digits: 6       // Точность задания числа выражающаяся в количестве десятичных знаков после точки
-      };
-  /*  }else{
-      this.state = {
-        value: this.props.value,         // Искомое число
-        min: this.props.min,          // Минимальное значение числа
-        max: this.props.max,          // Максимальное значение числа
-        step: this.props.step,        // Шаг изменения числа кнопками
-        multiple: this.props.multiple,    // Число должно без остатка делиться на данную величину
-        digits: this.props.digits         // Точность задания числа выражающаяся в количестве десятичных знаков после точки
-      };
-    }*/
+    super(props);
+    this.state = {
+        value: props.value,        // Искомое число, в данном случае его начальное значение
+        min: props.min,            // Минимальное значение числа
+        max: props.max,            // Максимальное значение числа
+        step: props.step,          // Шаг изменения числа кнопками, должно быть кратно и больше или равно шагу квантования
+        multiple: props.multiple,  // Шаг квантования числа, число должно без остатка делиться на данную величину
+        digits: props.digits       // Точность вычисления числа выражающаяся в количестве десятичных знаков после точки
+    };
   }
 
   numDigits(value){
@@ -139,7 +128,7 @@ class Spinner extends Component {
     return (
       <div className="Spinner">
         <input className="Spinner-Decrement" type="button" value="-" onClick={(e)=>{this.decrement(e)}}/>
-        <input className="Spinner-Value" type="text" value={this.showValue()} 
+        <input className="Spinner-Value" type="text" value={this.showValue()}
           onChange={(e)=>{this.change(e)}}
           onKeyDown={(e)=>{this.pressKey(e)}}
         />

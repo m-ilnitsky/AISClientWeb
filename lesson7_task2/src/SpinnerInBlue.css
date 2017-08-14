@@ -7,29 +7,12 @@
     width: 200px;
     padding: 0;
     margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.SpinnerInBlue-Decrement,
-.SpinnerInBlue-Increment,
-.SpinnerInBlue-Value {
-    position: absolute;
-    top: 5px;
-}
-
-.SpinnerInBlue-Decrement {
-    left: 5px;
-}
-
-.SpinnerInBlue-Value {
-    left: 50px;
-}
-
-.SpinnerInBlue-Increment {
-    left: 155px;
-}
-
-.SpinnerInBlue-Decrement,
-.SpinnerInBlue-Increment {
+.SpinnerInBlue__Decrement,
+.SpinnerInBlue__Increment {
     background-color: #aaf;
     color: #007;
     border: none;
@@ -44,8 +27,12 @@
     padding: 0;
     margin: 0;
 }
+.SpinnerInBlue__Decrement:hover,
+.SpinnerInBlue__Increment:hover {
+    background-color: #ccf;
+}
 
-.SpinnerInBlue-Value {
+.SpinnerInBlue__Value {
     background-color:#aaf;
     color: #007;
     border: none;
@@ -58,4 +45,26 @@
     padding: 0;
     margin: 0;
     text-align: center;
+}
+.SpinnerInBlue__Value:focus {
+    background-color: #ccf;
+}
+
+.SpinnerInBlue__Decrement,
+.SpinnerInBlue__Increment,
+.SpinnerInBlue__Value {
+    position: absolute;
+    top: 5px;
+}
+
+.SpinnerInBlue__Decrement {
+    left: 5px;
+}
+
+.SpinnerInBlue__Value {
+    left: 50px;
+}
+
+.SpinnerInBlue__Increment {
+    left: 155px;
 }
