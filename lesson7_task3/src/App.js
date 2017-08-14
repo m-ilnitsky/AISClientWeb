@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import LoginPage from './LoginPage';
+import LoginForm from './LoginForm';
 
 class App extends Component {
   render() {
@@ -14,7 +14,8 @@ class App extends Component {
           <p>Создать компонент диалог для авторизации</p>
         </div>
         <div className="App__Body">
-          <LoginPage id="LoginPage" />
+          <h2>Добро пожаловать!</h2>
+          <LoginForm id="LoginForm" />
         </div>
       </div>
     );
