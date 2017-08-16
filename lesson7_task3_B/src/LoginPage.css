@@ -1,0 +1,30 @@
+.LoginPage {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: #aaa;
+}
+
+.LoginPage__Body {
+  font-size: large;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.LoginPage__Vertical {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.LoginPage__Horizontal {
+  display: inline-block;
+}
