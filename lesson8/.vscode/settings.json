@@ -1,0 +1,18 @@
+// Workspace settings
+{
+    // The following will hide the js and map files in the editor
+    "files.exclude": {
+        "node_modules": true
+        , "App_Start": true
+        , "bin": true
+        , "build/**/*": true
+        , ".vscode/chrome": true
+        , "obj": true
+        , "Properties": true
+        , "**/*.csproj": true
+        , "**/*.csproj.user": true
+        , "**/*.config": true
+        , "**/*.asax": true
+        , "**/*.asax.cs": true
+    }
+}
